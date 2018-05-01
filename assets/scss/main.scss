@@ -1,15 +1,15 @@
-@import "import/reset";
-@import "import/variables";
-@import "import/buttons";
-@import "import/forms";
-@import "import/lists";
-@import "import/tables";
-@import "import/mixin";
-@import "import/wordpress";
+@import 'import/reset';
+@import 'import/variables';
+@import 'import/buttons';
+@import 'import/forms';
+@import 'import/lists';
+@import 'import/tables';
+@import 'import/mixin';
+@import 'import/wordpress';
 
 @import 'grid/bootstrap-grid';
 
-@import "gulp_png_sprite";
+@import 'gulp_png_sprite';
 
 
 body {
@@ -17,10 +17,14 @@ body {
   font-size: $base-font-size;
   font-weight: $fnorm;
   line-height: $base-line-height;
+
   min-width: 320px;
+
   transition: $base-transition;
+
   color: $base-font-color;
   background-color: $base-background-color;
+
   -webkit-font-smoothing: antialiased;
 }
 h1,
@@ -32,6 +36,7 @@ h6 {
   font-family: $heading-font-family;
   font-size: $base-font-size;
   line-height: $heading-line-height;
+
   margin: 0 0 $small-spacing;
 }
 p,
@@ -41,6 +46,7 @@ pre {
 a {
   transition: $base-transition;
   text-decoration: none;
+
   color: $action-color;
   &:active,
   &:focus,
@@ -55,6 +61,7 @@ a {
 }
 hr {
   margin: $base-spacing 0;
+
   border-top: none;
   border-right: none;
   border-bottom: $base-border;
@@ -67,6 +74,7 @@ picture {
 }
 .wrapper {
   position: relative;
+
   width: 100%;
   height: auto !important;
   height: 100%;
@@ -77,7 +85,6 @@ picture {
 }
 .container {
   position: relative;
-  max-width: $width;
 }
 
 header {
@@ -97,7 +104,24 @@ nav {
     }
   }
 }
+.home-slider {
+  position: relative;
+  &:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
 
+    display: block;
+
+    width: 59.15%;
+
+    content: '';
+background-size: contain;
+    background-image: url(../img/home-slider-bg.png);
+    background-repeat: no-repeat;
+  }
+}
 section {
   padding: 0 0 $footer;
 }
@@ -112,12 +136,13 @@ article {
 footer {
   height: $footer;
   margin: $footer_margin auto 0;
+
   background-color: $gray-light;
 }
 
 
-@import "media";
+@import 'media';
 
-@import "fonts/font_roboto";
-@import "import/base64";
-@import "import/print";
+@import 'fonts/font_roboto';
+@import 'import/base64';
+@import 'import/print';

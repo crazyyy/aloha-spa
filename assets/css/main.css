@@ -2549,7 +2549,6 @@ picture {
 
 .container {
   position: relative;
-  max-width: 980px;
 }
 
 header {
@@ -2566,6 +2565,23 @@ header .header--logo img {
 
 nav ul li {
   display: inline-block;
+}
+
+.home-slider {
+  position: relative;
+}
+
+.home-slider:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 59.15%;
+  content: '';
+  background-size: contain;
+  background-image: url(../img/home-slider-bg.png);
+  background-repeat: no-repeat;
 }
 
 section {
