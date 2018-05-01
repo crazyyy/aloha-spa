@@ -26,14 +26,19 @@
 <body>
 <!-- wrapper -->
 <div class="wrapper">
-  <nav class="header-nav--top">
-    <ul>
-      <li><a href="">name</a></li>
-      <li><a href="">name</a></li>
-      <li><a href="">name</a></li>
-      <li><a href="">name</a></li>
-    </ul>
-  </nav><!-- /.header-nav--top -->
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="header-nav--top col-lg-12">
+        <ul>
+          <li><a href="">О салоне</a></li>
+          <li><a href="">Фитобочка</a></li>
+          <li><a href="">Услуги и цены</a></li>
+          <li><a href="">Сертификат на массаж</a></li>
+        </ul>
+      </nav><!-- /.header-nav--top -->
+    </div><!-- /.row -->
+  </div><!-- /.container-fluid -->
+
   <header role="banner">
     <div class="container">
       <div class="row">
@@ -135,156 +140,84 @@
           </a><!-- home-actions--item -->
         </div><!-- /.home-actions col-xl-12 -->
 
-        <article class="col-md-8">
-          <h1 class="page-title">Пример контента (рыба)</h1>
-          <p>The purpose of this HTML is to help determine what default settings are with Bitters and to make sure that all possible HTML Elements are included in this HTML so as to not miss any possible Elements when designing a site.</p>
-
-          <hr>
-
-          <h1>h1. Heading</h1>
-          <h2>h2. Heading</h2>
-          <h3>h3. Heading</h3>
-          <h4>h4. Heading</h4>
-          <h5>h5. Heading</h5>
-          <h6>h6. Heading</h6>
-
-          <hr>
-
-          <h1 class="ctitle">Paragraph</h1>
-
-          <p>Lorem ipsum dolor sit amet, <a href="#" title="test link">test link</a> adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.</p>
-
-          <p>Lorem ipsum dolor sit amet, <em>emphasis</em> consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.</p>
-
-          <hr>
-
-          <h1 class="ctitle">List Types</h1>
-
-          <h3>Definition List - dl > dt + dd</h3>
-          <dl>
-            <dt>Definition List Title</dt>
-            <dd>This is a definition list division.</dd>
-          </dl>
-
-          <h3>Ordered List - ol</h3>
-          <ol>
-            <li>List Item 1</li>
-            <li>List Item 2</li>
-            <li>List Item 3</li>
-          </ol>
-
-          <h3>Unordered List - ul</h3>
-          <ul>
-            <li>List Item 1</li>
-            <li>List Item 2</li>
-            <li>List Item 3</li>
-          </ul>
-
-          <hr>
-
-          <h1 class="ctitle">Fieldsets and Form Elements</h1>
-
-          <fieldset>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus.</p>
-
-            <form>
-              <h2>Form Element</h2>
-
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui.</p>
-
-              <p><label for="text_field">Text Field:</label>
-                <input type="text" id="text_field"></p>
-
-              <p><label for="text_area">Text Area:</label>
-                <textarea id="text_area"></textarea></p>
-
-              <p><label for="select_element">Select Element:</label>
-                <select name="select_element">
-                  <optgroup label="Option Group 1">
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                    <option value="3">Option 3</option>
-                  </optgroup>
-                  <optgroup label="Option Group 2">
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                    <option value="3">Option 3</option>
-                  </optgroup>
-              </select></p>
-
-              <p><label for="radio_buttons">Radio Buttons:</label>
-                <label>
-                  <input type="radio" class="radio" name="radio_button" value="radio_1"> Radio 1
-                </label>
-                <label>
-                  <input type="radio" class="radio" name="radio_button" value="radio_2"> Radio 2
-                </label>
-                <label>
-                  <input type="radio" class="radio" name="radio_button" value="radio_3"> Radio 3
-                </label>
-              </p>
-
-              <p>
-                <label for="checkboxes">Checkboxes:</label>
-                <label>
-                  <input type="checkbox" class="checkbox" name="checkboxes" value="check_1"> Checkbox 1
-                </label>
-                <label>
-                  <input type="checkbox" class="checkbox" name="checkboxes" value="check_2"> Checkbox 2
-                </label>
-                <label>
-                  <input type="checkbox" class="checkbox" name="checkboxes" value="check_3"> Checkbox 3
-                </label>
-              </p>
-
-              <p><label for="password">Password:</label>
-                <input type="password" class="password" name="password">
-              </p>
-
-              <p><label for="file">File Input:</label>
-                <input type="file" class="file" name="file">
-              </p>
-
-
-              <p><input type="submit" value="Submit"></p>
-            </form>
-          </fieldset>
-
-          <hr>
-
-          <h1 class="ctitle">Tables</h1>
-
-          <table cellspacing="0" cellpadding="0">
-            <tbody>
-              <tr>
-                <th>Table Header 1</th><th>Table Header 2</th><th>Table Header 3</th>
-              </tr>
-              <tr>
-                <td>Division 1</td><td>Division 2</td><td>Division 3</td>
-              </tr>
-              <tr class="even">
-                <td>Division 1</td><td>Division 2</td><td>Division 3</td>
-              </tr>
-              <tr>
-                <td>Division 1</td><td>Division 2</td><td>Division 3</td>
-              </tr>
-            </tbody>
-          </table>
-        </article>
-
-        <aside class="sidebar col-md-4" role="complementary">
-          <div class="widget">
-            <h6>Пример виджета</h6>
-            <ul>
-              <li class="cat-item-none"><a href="#">name</a></li>
-              <li class="cat-item-none"><a href="#">name</a></li>
-              <li class="cat-item-none"><a href="#">name</a></li>
-            </ul>
-          </div><!-- widget -->
-        </aside><!-- /sidebar -->
+        <div class="home-gift row">
+          <h5 class="home-gift--title">Подарочный сертификат</h5>
+          <p>Что подарить? Чем побаловать себя, любимых и родных?</p>
+          <p>Мир массажа, спа, хаммам – мир волшебства и блаженства. Вы как Джин дарите себе и любимым впечатления. Вы влюбитесь в каждую услугу, что есть у нас на сайте и не сможете отказать себе в чём-то.  Вы почувствуете себя настоящей принцессой, настоящим принцем в руках наших специалистов. И у нас вы по-настоящему расслабитесь.</p>
+          <p>Купить подарочный сертификат просто: выбираете услугу на нашем сайте самостоятельно или с помощью наших администраторов, приезжаете в наш спа салон за сертификатом либо мы сделаем адресную доставку.</p>
+          <p>– Подарите себе и любимым впечатления –</p>
+          <button class="btn btn-blue-half home-gift--order">Заказать</button>
+        </div><!-- /.home-gift row -->
 
       </div><!-- /.row -->
     </div><!-- /.container -->
+
+    <div class="home-girls container-fluid">
+      <div class="row">
+        <div class="col-lg-5"></div>
+        <div class="col-lg-7">
+          <h4 class="home-girls--title">Девичник в спа</h4>
+          <p>Поможем Вам устроить великолепный, запоминающийся SPA девичник из 2-6 человек. Чтоб уйти от мирской суеты и прекрасно провести время с подругами, мамой, сестрой и совместить приятное с полезным. Мы предлагаем разные варианты спа процедур в зависимости от ваших пожеланий. Это отличный способ отдохнуть телом и душой.</p>
+          <p>Во время процедур вам предложат угощение из фруктов, ароматного чая с медом, сухофруктов и восточных сладостей, напитки. Подарите себе незабываемый праздник</p>
+          <button class="btn btn-blue-half home-girls--order">Заказать</button>
+        </div><!-- /.col-lg-7 -->
+      </div>
+    </div><!-- /.home-girls container-fluid -->
+
+    <div class="home-video">
+      <div class="container">
+        <div class="row">
+          <div class="home-video--item">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt molestias quisquam ratione molestiae provident, laboriosam aliquam exercitationem eos sequi quasi eum, delectus deleniti sunt est nobis cum repudiandae repellendus voluptas!
+          </div><!-- /.home-video--item -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </div><!-- /.home-video -->
+
+    <div class="home-reviews">
+      <div class="container">
+        <div class="row">
+          <span class="home-reviews--nav home-reviews--nav-prev"></span>
+          <span class="home-reviews--nav home-reviews--nav-next"></span>
+          <div class="home-reviews--item col-lg-6">
+            <img src="" alt="">
+            <h6 class="home-reviews--name">Оксана Коломієць</h6>
+            <span class="home-reviews--title">UI/UX дизайнер</span>
+            <p>Замечательное место, профессионализм обслуживания, индивидуальный подход к каждому клиенту, качество SPA не сможет отставить равнодушным даже самого требовательного гостя.</p>
+          </div><!-- /.home-reviews--item col-lg-6 -->
+          <div class="home-reviews--item col-lg-6">
+            <img src="" alt="">
+            <h6 class="home-reviews--name">Єліна Світоліна</h6>
+            <span class="home-reviews--title">Тенісистка</span>
+            <p>Замечательное место, профессионализм обслуживания, индивидуальный подход к каждому клиенту, качество SPA не сможет отставить равнодушным даже самого требовательного гостя.</p>
+          </div><!-- /.home-reviews--item col-lg-6 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </div><!-- /.home-reviews -->
+
+    <div class="home-contacts">
+      <div class="container">
+        <div class="row">
+          <div class="home-contacts--map col-lg-6">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rerum perferendis hic, cupiditate id repellat ea possimus a porro laboriosam alias nihil incidunt, impedit consectetur similique quibusdam animi maiores culpa.
+          </div><!-- /.home-contacts--map col-lg-6 -->
+          <div class="home-contacts--adress col-lg-6">
+            <h6>наш адрес:</h6>
+            <p>ул. Павла Иоанна ІІ, 10 Киев, 01042 Печерский район</p>
+            <h6>Электронная почта:</h6>
+            <a href="mailto:alohaspasalon@gmail.com">alohaspasalon@gmail.com</a>
+            <h6>Телефоны:</h6>
+            <a href="tel:+380445281711">+38 (044) 52 81 711</a>
+            <a href="tel:+380992065594">+38 (099) 20 65 594</a>
+            <a href="tel:+380682759512">+38 (068) 27 59 512</a>
+            <a href="tel:+380934264740">+38 (093) 42 64 740</a>
+            <h6>наш адрес:</h6>
+            <p>ул. Павла Иоанна ІІ, 10 Киев, 01042 Печерский район</p>
+            <button class="btn btn-blue-half home-contacts--order">Заказать звонок</button>
+          </div><!-- /.home-contacts--adress col-lg-6 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </div><!-- /.home-contacts -->
 
   </section><!-- /section -->
 </div><!-- /wrapper -->
@@ -293,9 +226,47 @@
   <div class="container">
     <div class="row">
 
-      <p class="copyright col-md-12">
-        © 2016 Собственность. Работает на html2wp easy.
-      </p><!-- /copyright -->
+      <div class="footer-copy col-lg-4">
+        <p class="copyright">Мы не ставим задачу удивить Вас. Наша цель - помочь Вам в работе над собой, сделав ее удобной и эффективной. Качество - основной критерий нашей работы. Мы предлагаем первоклассные услуги по демократичным ценам!</p><!-- /copyright -->
+      </div><!-- /.footer-copy col-lg-4 -->
+
+      <div class="footer-widget col-lg-2">
+        <span class="footer-widget--title">ПОПУЛЯРНЫЕ УСЛУГИ</span>
+        <ul>
+          <li><a href="">Lorem ipsum dolor.</a></li>
+          <li><a href="">Eaque, necessitatibus, repellendus.</a></li>
+          <li><a href="">Odit, praesentium, consectetur.</a></li>
+          <li><a href="">Eveniet praesentium, deleniti.</a></li>
+          <li><a href="">Veritatis, saepe, officia?</a></li>
+        </ul>
+      </div><!-- /.footer-widget col-lg-2 -->
+
+      <div class="footer-widget col-lg-2">
+        <span class="footer-widget--title">информация</span>
+        <ul>
+          <li><a href="">Lorem ipsum dolor.</a></li>
+          <li><a href="">Nobis temporibus, esse.</a></li>
+          <li><a href="">Itaque, similique, in.</a></li>
+          <li><a href="">Itaque, a, magnam?</a></li>
+          <li><a href="">Vel, doloremque, ut?</a></li>
+        </ul>
+      </div><!-- /.footer-widget col-lg-2 -->
+
+      <div class="footer-widget col-lg-2">
+        <span class="footer-widget--title">РЕЖИМ РАБОТЫ</span>
+        <p>пн.-вс.: 10:00 - 21:00</p>
+        <p>Без выходных</p>
+      </div><!-- /.footer-widget col-lg-2 -->
+
+      <div class="footer-widget col-lg-2">
+        <span class="footer-widget--title">наш адрес</span>
+        <p>ул. Павла Иоанна ІІ, 10</p>
+        <p>Киев, 01042</p>
+        <p>Печерский район</p>
+        <p>+38(068) 275 95 12</p>
+        <a href=""><i class="ico ico-fb">RRRR</i></a>
+        <a href=""><i class="ico ico-inst">XXXX</i></a>
+      </div><!-- /.footer-widget col-lg-2 -->
 
     </div><!-- /.row -->
   </div><!-- /.container -->
