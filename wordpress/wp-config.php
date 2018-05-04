@@ -56,8 +56,8 @@ $table_prefix  = 'aloha_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define('FORCE_SSL_ADMIN', true);
-define('WP_DEBUG', true);
+define('FORCE_SSL_ADMIN', false);
+define('WP_DEBUG', false);
 define( 'UPLOADS', ''.'img' );
 
 /* That's all, stop editing! Happy blogging. */
