@@ -1,6 +1,6 @@
 {
-  "domain": "wp-framework.dev",
-  "theme": "wp-framework",
+  "domain": "aloha.local",
+  "theme": "wp-aloha",
   "path": {
     "base": {
       "src":"assets/",

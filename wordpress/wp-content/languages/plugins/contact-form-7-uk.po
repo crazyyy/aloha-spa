@@ -1309,7 +1309,7 @@ msgstr "Редагувати контактну форму"
 msgid "Contact"
 msgstr "Зв'язок"
 
-#. #-#-#-#-#  contact-form-7-code.pot (Contact Form 7 4.9.2)  #-#-#-#-#
+#. #-#-#-#-#  contact-form-7-code.pot (Contact Form 7 4.9.1)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
 #: admin/admin.php:21 modules/flamingo.php:150
 msgid "Contact Form 7"
