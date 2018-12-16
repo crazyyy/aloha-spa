@@ -1,12 +1,21 @@
-1) головна - v
-2) сторінка категорії - v
-3) сторінка послуги - v
-4) СЕРТИФІКАТ НА МАСАЖ - v
-5) девічнік в спа(або може вона в сторінку  масажу підійде)
-6) ціни -v 
-7)контакти - v
-8) сторінка статті - v
-9)блог - v
-10)про нас - v
+1) головна - v http://demo.saitobaza.ru/wp-admin/post.php?post=13&action=edit     https://aloha.local
+2) сторінка категорії - v http://demo.saitobaza.ru/wp-admin/term.php?taxonomy=category&tag_ID=4&post_type=post&wp_http_referer=%2Fwp-admin%2Fedit-tags.php%3Ftaxonomy%3Dcategory http://demo.saitobaza.ru/category/novosti/ 
+3) сторінка послуги - v  http://demo.saitobaza.ru/wp-admin/post.php?post=3771&action=edit 
+4) СЕРТИФІКАТ НА МАСАЖ - v http://demo.saitobaza.ru/wp-admin/post.php?post=3768&action=edit  http://demo.saitobaza.ru/certificate-page-example/
+5) девічнік в спа(або може вона в сторінку  масажу підійде) http://demo.saitobaza.ru/wp-admin/post.php?post=952&action=edit   http://demo.saitobaza.ru/devichnik/ 
+6) ціни -v http://demo.saitobaza.ru/wp-admin/post.php?post=948&action=edit http://demo.saitobaza.ru/pricing/ 
+7) контакти - v http://demo.saitobaza.ru/wp-admin/post.php?post=210&action=edit        http://demo.saitobaza.ru/contact/
+8) сторінка статті - v  http://demo.saitobaza.ru/wp-admin/post.php?post=2982&action=edit http://demo.saitobaza.ru/pochemo-vazhno-hodit-na-hammam/ 
+9)блог - v http://demo.saitobaza.ru/wp-admin/term.php?taxonomy=category&tag_ID=4&post_type=post&wp_http_referer=%2Fwp-admin%2Fedit-tags.php%3Ftaxonomy%3Dcategory http://demo.saitobaza.ru/category/novosti/  
+10)про нас - v  http://demo.saitobaza.ru/wp-admin/post.php?post=326&action=edit http://demo.saitobaza.ru/about/ 
 11)сторінка товарів (просто фотка товару ціна і назва а коли наводиш то хай десь вилізе опис 
-коротеньки щоб неробтири ще карток товарів, але роби їх невеликими бо їх там має бути багато) - v
+коротеньки щоб неробтири ще карток товарів, але роби їх невеликими бо їх там має бути багато) - http://demo.saitobaza.ru/wp-admin/post.php?post=3667&action=edit http://demo.saitobaza.ru/product/ 
+12. gallaery single post example http://demo.saitobaza.ru/example-of-gallery/  and gallerp page http://demo.saitobaza.ru/wp-admin/post.php?post=3631&action=edit  http://demo.saitobaza.ru/example-of-gallery-page/ (prior to use page )
+13. Main massages page http://demo.saitobaza.ru/wp-admin/post.php?post=3689&action=edit   http://demo.saitobaza.ru/massage/ 
+14. courses page http://demo.saitobaza.ru/wp-admin/post.php?post=3547&action=edit  http://demo.saitobaza.ru/kursy-massazha/ 
+
+
+
+
+
+https://monosnap.com/file/VZRF3Y5Dfp8mzkmTymvsKdfK5PenuT.png

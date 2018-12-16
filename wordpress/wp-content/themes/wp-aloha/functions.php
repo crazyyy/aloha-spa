@@ -52,6 +52,9 @@ function wpeHeaderScripts() {
     wp_register_script('jquery-migrate', '//cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.0/jquery-migrate.min.js', array(), '3.0.0');
     wp_enqueue_script('jquery-migrate');
 
+    wp_register_script('OwlCarousel2', '//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.6/owl.carousel.min.js', array(), '2.1.6');
+    wp_enqueue_script('OwlCarousel2');
+
     wp_register_script('modernizr', '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js', array(), '2.8.3');
     wp_enqueue_script('modernizr');
 
@@ -106,6 +109,28 @@ if (function_exists('add_theme_support')) {
 }
 
 // WPE head navigation
+function wpeHeadNavTop() {
+  wp_nav_menu(
+  array(
+    'theme_location'  => 'header-menu-top',
+    'menu'            => '',
+    'container'       => 'div',
+    'container_class' => 'menu-{menu slug}-container',
+    'container_id'    => '',
+    'menu_class'      => 'menu',
+    'menu_id'         => '',
+    'echo'            => true,
+    'fallback_cb'     => 'wp_page_menu',
+    'before'          => '',
+    'after'           => '',
+    'link_before'     => '',
+    'link_after'      => '',
+    'items_wrap'      => '<ul class="headnav-top">%3$s</ul>',
+    'depth'           => 0,
+    'walker'          => ''
+    )
+  );
+}
 function wpeHeadNav() {
   wp_nav_menu(
   array(
@@ -122,7 +147,7 @@ function wpeHeadNav() {
     'after'           => '',
     'link_before'     => '',
     'link_after'      => '',
-    'items_wrap'      => '<ul class="headnav">%3$s</ul>',
+    'items_wrap'      => '<ul class="headnav-bottom">%3$s</ul>',
     'depth'           => 0,
     'walker'          => ''
     )
@@ -152,10 +177,32 @@ function wpeFootNav() {
   );
 }
 // WPE sidebar navigation
-function wpeSideNav() {
+function wpeSideNavOne() {
   wp_nav_menu(
   array(
-    'theme_location'  => 'sidebar-menu',
+    'theme_location'  => 'sidebar-menu-1',
+    'menu'            => '',
+    'container'       => 'div',
+    'container_class' => 'menu-{menu slug}-container',
+    'container_id'    => '',
+    'menu_class'      => 'menu',
+    'menu_id'         => '',
+    'echo'            => true,
+    'fallback_cb'     => 'wp_page_menu',
+    'before'          => '',
+    'after'           => '',
+    'link_before'     => '',
+    'link_after'      => '',
+    'items_wrap'      => '<ul class="sidebarnav">%3$s</ul>',
+    'depth'           => 0,
+    'walker'          => ''
+    )
+  );
+}
+function wpeSideNavTwo() {
+  wp_nav_menu(
+  array(
+    'theme_location'  => 'sidebar-menu-2',
     'menu'            => '',
     'container'       => 'div',
     'container_class' => 'menu-{menu slug}-container',
@@ -178,8 +225,10 @@ function wpeSideNav() {
 add_action('init', 'register_html5_menu'); // Add HTML5 Blank Menu
 function register_html5_menu() {
   register_nav_menus(array(
-    'header-menu' => __('Меню в шапке', 'wpeasy'),
-    'sidebar-menu' => __('Меню в сайдбар', 'wpeasy'),
+    'header-menu-top' => __('Меню в шапке 1', 'wpeasy'),
+    'header-menu' => __('Меню в шапке 2', 'wpeasy'),
+    'sidebar-menu-1' => __('Меню в сайдбар #1', 'wpeasy'),
+    'sidebar-menu-2' => __('Меню в сайдбар #2', 'wpeasy'),
     'footer-menu' => __('Меню в подвал', 'wpeasy')
   ));
 }
@@ -187,26 +236,15 @@ function register_html5_menu() {
 if (function_exists('register_sidebar')) {
   //  Define Sidebar Widget Area 1
   register_sidebar(array(
-    'name' => __('Блок виджетов #1', 'wpeasy'),
+    'name' => __('Footer Wdgets', 'wpeasy'),
     'description' => __('Description for this widget-area...', 'wpeasy'),
     'id' => 'widgetarea1',
-    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'before_widget' => '<div id="%1$s" class="footer-widget %2$s col-xl-2">',
     'after_widget' => '</div>',
-    'before_title' => '<h6>',
-    'after_title' => '</h6>'
+    'before_title' => '<span class="footer-widget--title">',
+    'after_title' => '</span>'
   ));
-  //  Define Sidebar Widget Area 2. If your want to display more widget - uncoment this
-  /*
-  register_sidebar(array(
-    'name' => __('Блок виджетов #2', 'wpeasy'),
-    'description' => __('Description for this widget-area...', 'wpeasy'),
-    'id' => 'widgetarea2',
-    'before_widget' => '<div id="%1$s" class="widget %2$s">',
-    'after_widget' => '</div>',
-    'before_title' => '<h6>',
-    'after_title' => '</h6>'
-  ));
-  */
+
 }
 
 //  Custom Excerpts
@@ -239,13 +277,11 @@ function wpeExcerpt($length_callback = '', $more_callback = '') {
 
 //  Custom View Article link to Post
 //  RU: Добавляем "Читать дальше" к обрезанным записям
-/*
 function html5_blank_view_article($more) {
   global $post;
-  return '... <!-- noindex --><a rel="nofollow" class="view-article" href="' . get_permalink($post->ID) . '">' . __('View Article', 'wpeasy') . '</a><!-- /noindex -->';
+  return '...';
 }
 add_filter('excerpt_more', 'html5_blank_view_article'); // Add 'View Article' button instead of [...] for Excerpts
-*/
 // Remove the <div> surrounding the dynamic navigation to cleanup markup
 add_filter('wp_nav_menu_args', 'my_wp_nav_menu_args'); // Remove surrounding <div> from WP Navigation
 function my_wp_nav_menu_args($args = '') {
@@ -431,7 +467,7 @@ function single_result() {
 function easy_breadcrumbs() {
 
   // Settings
-  $separator          = ' &raquo; ';
+  $separator          = ' / ';
   $breadcrums_id      = 'breadcrumbs';
   $breadcrums_class   = 'breadcrumbs';
   $home_title         = __('Home', 'wpeasy');
@@ -665,7 +701,6 @@ add_filter( 'term_link', function($termlink){
   return str_replace('/./', '/', $termlink);
 }, 10, 1 );
 
-
 add_action( 'init', 'disable_wp_emojicons' );
 function disable_wp_emojicons() {
   // all actions related to emojis
@@ -679,6 +714,7 @@ function disable_wp_emojicons() {
   // filter to remove TinyMCE emojis
   add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
 }
+
 function disable_emojicons_tinymce( $plugins ) {
   if ( is_array( $plugins ) ) {
     return array_diff( $plugins, array( 'wpemoji' ) );
@@ -686,5 +722,111 @@ function disable_emojicons_tinymce( $plugins ) {
     return array();
   }
 }
+
+add_action( 'init', 'post_type_product' );
+function post_type_product() {
+  $labels = array(
+    'name'=> 'Products',
+    'singular_name' => 'Products',
+    'add_new' => 'Add',
+    'add_new_item' => 'Add',
+    'edit' => 'Edit',
+    'edit_item' => 'Edit',
+    'new-item' => 'Add',
+    'view' => 'View',
+    'view_item' => 'View',
+    'search_items' => 'Search',
+    'not_found' => 'Not Found',
+    'not_found_in_trash' => 'Not Found',
+    'parent' => 'Parent',
+  );
+  $args = array(
+    'labels' => $labels,
+    'description' => 'Products Post Type',
+    'public' => true,
+    'exclude_from_search' => true,
+    'show_ui' => true,
+    'menu_position' => 6,
+    // https://developer.wordpress.org/resource/dashicons/
+    'menu_icon' => 'dashicons-image-filter',
+    'capability_type' => 'post',
+    'hierarchical' => false,
+    'supports' => array('title','editor','thumbnail'),
+    'rewrite' => array( 'slug' => 'product' ),
+    'show_in_rest' => true
+  );
+  register_post_type( 'product' , $args );
+}
+
+add_action( 'init', 'post_type_massage' );
+function post_type_massage() {
+  $labels = array(
+    'name'=> 'Massage',
+    'singular_name' => 'Massages',
+    'add_new' => 'Add',
+    'add_new_item' => 'Add',
+    'edit' => 'Edit',
+    'edit_item' => 'Edit',
+    'new-item' => 'Add',
+    'view' => 'View',
+    'view_item' => 'View',
+    'search_items' => 'Search',
+    'not_found' => 'Not Found',
+    'not_found_in_trash' => 'Not Found',
+    'parent' => 'Parent',
+  );
+  $args = array(
+    'labels' => $labels,
+    'description' => 'Massage Post Type',
+    'public' => true,
+    'exclude_from_search' => true,
+    'show_ui' => true,
+    'menu_position' => 7,
+    // https://developer.wordpress.org/resource/dashicons/
+    'menu_icon' => 'dashicons-smiley',
+    'capability_type' => 'post',
+    'hierarchical' => false,
+    'supports' => array('title','editor','thumbnail'),
+    'rewrite' => array( 'slug' => 'massage' ),
+    'show_in_rest' => true
+  );
+  register_post_type( 'massage' , $args );
+}
+
+add_action( 'init', 'post_type_reviews' );
+function post_type_reviews() {
+  $labels = array(
+    'name'=> 'Review',
+    'singular_name' => 'Reviews',
+    'add_new' => 'Add',
+    'add_new_item' => 'Add',
+    'edit' => 'Edit',
+    'edit_item' => 'Edit',
+    'new-item' => 'Add',
+    'view' => 'View',
+    'view_item' => 'View',
+    'search_items' => 'Search',
+    'not_found' => 'Not Found',
+    'not_found_in_trash' => 'Not Found',
+    'parent' => 'Parent',
+  );
+  $args = array(
+    'labels' => $labels,
+    'description' => 'Massage Post Type',
+    'public' => true,
+    'exclude_from_search' => true,
+    'show_ui' => true,
+    'menu_position' => 8,
+    // https://developer.wordpress.org/resource/dashicons/
+    'menu_icon' => 'dashicons-format-status',
+    'capability_type' => 'post',
+    'hierarchical' => false,
+    'supports' => array('title','editor','thumbnail'),
+    'rewrite' => array( 'slug' => 'review' ),
+    'show_in_rest' => true
+  );
+  register_post_type( 'review' , $args );
+}
+
 
 ?>

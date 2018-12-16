@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Yoast SEO - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2018-04-17 11:51:15+0000\n"
+"PO-Revision-Date: 2018-05-11 04:25:27+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,11 @@ msgstr ""
 "X-Generator: GlotPress/2.4.0-alpha\n"
 "Language: ru\n"
 "Project-Id-Version: Plugins - Yoast SEO - Stable (latest release)\n"
+
+#. translators: %1$s expands to 'Yoast SEO Premium'.
+#: admin/config-ui/components/class-component-configuration-choices.php:67
+msgid "While we strive to make setting up %1$s as easy as possible, we understand it can still be daunting. If you would rather have us set up %1$s for you, order a %1$s configuration service and sit back while we configure your site."
+msgstr "Хотя мы и стремимся сделать настройку %1$s максимально простой, мы понимаем, что она все еще может быть достаточно сложной. Если вы предпочитаете, чтобы мы установили Вам %1$s, сделайте заказ на выполнение настройки %1$s и можете подождать, пока мы настраиваем ваш сайт."
 
 #. translators: %1$s expands to a link start tag to the Baidu Webmaster Tools
 #. site add page, %2$s is the link closing tag.
@@ -1501,6 +1506,12 @@ msgstr "Перейдите на премиум и наши эксперты по
 msgid "The plugin %2$s changes your site's output and in doing that differentiates between search engines and normal users, a process that's called cloaking. We highly recommend that you disable it."
 msgstr "Плагин %2$s изменяет вид вашего сайта, так что поисковые системы и обычные пользователи видят его по-разному (это называется cloaking). Мы очень рекомендуем вам отключить его."
 
+#. translators: %1$s expands to a 'strong' start tag, %2$s to a 'strong' end
+#. tag.
+#: admin/class-premium-benefits-list.php:26
+msgid "%1$sSocial media preview%2$s: Facebook & Twitter"
+msgstr "Предварительный просмотр %1$sсоциальных медиа%2$s: Facebook и Twitter"
+
 #: admin/class-help-center.php:211 admin/class-premium-benefits-list.php:30
 #: admin/class-premium-upsell-admin-block.php:52
 msgid "No ads!"
@@ -1698,14 +1709,6 @@ msgstr "Количество слов после каждого подзагол
 #. on yoast.com, 	   %3$s expands to the recommended maximum sentence length,
 #. %4$s expands to the anchor end tag, 	   %5$s expands to the recommended
 #. maximum percentage.
-#: languages/yoast-seo-js.php:79
-msgid "%1$s of the sentences contain %2$smore than %3$s words%4$s, which is more than the recommended maximum of %5$s. Try to shorten the sentences."
-msgstr "\t%1$s из предложений содержит %2$s более, чем %3$s слов%4$s, что более, чем рекомендуемый максимум %5$s слов."
-
-#. Translators: %1$d expands to percentage of sentences, %2$s expands to a link
-#. on yoast.com, 	   %3$s expands to the recommended maximum sentence length,
-#. %4$s expands to the anchor end tag, 	   %5$s expands to the recommended
-#. maximum percentage.
 #: languages/yoast-seo-js.php:73
 msgid "%1$s of the sentences contain %2$smore than %3$s words%4$s, which is less than or equal to the recommended maximum of %5$s."
 msgstr "%1$s из предложений содержит %2$s более, чем %3$s слов%4$s, что меньше рекомендуемого максимума %5$s или равно ему."
@@ -1743,13 +1746,6 @@ msgstr[2] "В тексте найдено %1$d случаев, когда %2$d �
 msgid "%1$s of the sentences contain %2$spassive voice%3$s, which is less than or equal to the recommended maximum of %4$s."
 msgstr "%1$s предложений содержат %2$sстрадательный залог%3$s, что меньше рекомендованного максимума в %4$s или равно ему."
 
-#. Translators: %1$s expands to the number of sentences in passive voice, %2$s
-#. expands to a link on yoast.com, 	   %3$s expands to the anchor end tag, %4$s
-#. expands to the recommended value.
-#: languages/yoast-seo-js.php:52
-msgid "%1$s of the sentences contain %2$spassive voice%3$s, which is more than the recommended maximum of %4$s. Try to use their active counterparts."
-msgstr "%1$s предложений содержат %2$sстрадательный залог%3$s, что превышает рекомендуемый максимум в %4$s . Постарайтесь использовать активный залог."
-
 #. Translators: %1$d expands to the number of paragraphs, %2$d expands to the
 #. recommended value
 #: languages/yoast-seo-js.php:42
@@ -1758,6 +1754,21 @@ msgid_plural "%1$d of the paragraphs contain more than the recommended maximum o
 msgstr[0] "%1$d абзац содержит больше слов, чем рекомендуемый максимум - %2$d. Вы уверены, что вся информация в каждом из этих абзацев принадлежит той же теме и поэтому принадлежит одному абзацу?"
 msgstr[1] "%1$d абзаца содержит больше слов, чем рекомендуемый максимум - %2$d. Вы уверены, что вся информация в каждом из этих абзацев принадлежит той же теме и поэтому принадлежит одному абзацу?"
 msgstr[2] "%1$d абзацев содержит больше слов, чем рекомендуемый максимум - %2$d. Вы уверены, что вся информация в каждом из этих абзацев принадлежит той же теме и поэтому принадлежит одному абзацу?"
+
+#. Translators: %1$s expands to the number of sentences in passive voice, %2$s
+#. expands to a link on yoast.com, 	   %3$s expands to the anchor end tag, %4$s
+#. expands to the recommended value.
+#: languages/yoast-seo-js.php:52
+msgid "%1$s of the sentences contain %2$spassive voice%3$s, which is more than the recommended maximum of %4$s. Try to use their active counterparts."
+msgstr "%1$s предложений содержат %2$sстрадательный залог%3$s, что превышает рекомендуемый максимум в %4$s . Постарайтесь использовать активный залог."
+
+#. Translators: %1$d expands to percentage of sentences, %2$s expands to a link
+#. on yoast.com, 	   %3$s expands to the recommended maximum sentence length,
+#. %4$s expands to the anchor end tag, 	   %5$s expands to the recommended
+#. maximum percentage.
+#: languages/yoast-seo-js.php:79
+msgid "%1$s of the sentences contain %2$smore than %3$s words%4$s, which is more than the recommended maximum of %5$s. Try to shorten the sentences."
+msgstr "%1$s из предложений содержит %2$s более %3$s слов%4$s, что более, чем рекомендуемый максимум %5$s предложений. Попробуйте сократить фразы."
 
 #: admin/views/partial-alerts-warnings.php:13
 msgid "No new notifications."
@@ -5074,10 +5085,6 @@ msgstr "Вы должны %1$sзайти в Настройки чтения%2$s 
 msgid "Meta robots advanced"
 msgstr "Расширенная настройка тега Meta Robots "
 
-#: admin/class-admin.php:220
-msgid "FAQ"
-msgstr "Вопросы-Ответы"
-
 #: admin/class-customizer.php:221
 msgid "Prefix for search result pages:"
 msgstr "Prefix для страниц результатов поиска:"
@@ -5128,3 +5135,7 @@ msgstr "У записи неверный тип: %s."
 #: admin/views/tabs/dashboard/features.php:57
 msgid "XML sitemaps"
 msgstr "XML-карта сайта"
+
+#: admin/class-admin.php:220
+msgid "FAQ"
+msgstr "FAQ"

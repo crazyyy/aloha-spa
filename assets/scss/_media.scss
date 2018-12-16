@@ -1,14 +1,47 @@
+@media (max-width: 1570px) {
+  .header-nav--main {
+    li {
+      a {
+        padding-right: 5px;
+        padding-left: 0;
+      }
+    }
+  }
+  .header--phone {
+    background-position: 20px center;
+  }
+}
+
+@media (max-width: 1400px) {
+  .header-nav--main {
+    li {
+      padding-right: 5px;
+      padding-left: 5px;
+      &.has-child a:after {
+        right: -10px;
+      }
+    }
+  }
+  .header--phone {
+    background-position: left center;
+  }
+}
+
+// col-xl-# ( ≥1200px)
 @include media-breakpoint-down(xl) {
  }
-
+// col-lg-# ( ≥992px)
 @include media-breakpoint-down(lg) {
-}
 
+}
+// col-md-# ( ≥768px)
 @include media-breakpoint-down(md) {
 }
-
+// col-sm-# ( ≥576px)
 @include media-breakpoint-down(sm) {
 }
 
 @include media-breakpoint-down(xs) {
 }
+
+
